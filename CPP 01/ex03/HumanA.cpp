@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/05 17:11:25 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/07 17:13:53 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/07 15:34:06 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/07 16:12:10 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-#define	WEAPON_HPP
+#include "HumanA.hpp"
+#include "Weapon.hpp"
 
-#include <string>
-#include <iostream>
-
-class Weapon
+HumanA::HumanA(std::string Aname, Weapon& weapon) : weapon(weapon)
 {
-	private:
-			std::string _type;
-	public:
-			Weapon(std::string type);
-			~Weapon(void);
-			void setType(std::string newType);
-			const std::string& getType(void); 
-};
+	this->_name = Aname;
+}
+HumanA::~HumanA(){}
 
-#endif
+void HumanA::attack(void)
+{
+	std::cout << this->_name << " attacks with his " << weapon.getType() << std::endl;
+}

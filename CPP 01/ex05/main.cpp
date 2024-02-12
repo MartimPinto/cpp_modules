@@ -6,35 +6,26 @@
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 15:58:25 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/02/08 13:37:44 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/02/12 15:41:10 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
-#include "Weapon.hpp"
+#include "Harl.hpp"
 
-#define RESET	"\033[0m"
-#define GREEN	"\033[1m\033[32m"
-#define YELLOW	"\033[1m\033[33m"
-
-
-int main()
+void usage(void)
 {
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
+	std::cout << BLUE << "Usage: ./harl  LEVEL" << RESET << std::endl;
+	exit(1);
+}
+
+int main(int argc, char **argv)
+{
+	std::string level;
+	Harl harl;
+	
+	if (argc != 2)
+		usage();
+	level = argv[1];
+	harl.complain(level);
+	return (0);
 }

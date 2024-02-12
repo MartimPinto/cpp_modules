@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/31 15:58:25 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/02/08 13:37:44 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/07 16:18:50 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/08 13:36:55 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
 #include "HumanB.hpp"
 #include "Weapon.hpp"
 
-#define RESET	"\033[0m"
-#define GREEN	"\033[1m\033[32m"
-#define YELLOW	"\033[1m\033[33m"
-
-
-int main()
+HumanB::HumanB(std::string Bname)
 {
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
+	this->_name = Bname;
+	this->weapon = NULL;
+}
+
+HumanB::~HumanB(){}
+
+void HumanB::setWeapon(Weapon& weapon_name)
+{
+	this->weapon = &weapon_name;
+}
+
+void HumanB::attack(void)
+{
+	if (weapon && weapon->getType() != "")
+		std::cout << this->_name << " attacks with his " << weapon->getType() << std::endl;
+	else
+		std::cout << this->_name << " stares menacingly" << std::endl;
 }

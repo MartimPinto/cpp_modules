@@ -6,7 +6,7 @@
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:19:23 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/05 18:02:07 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/02/07 15:19:21 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ Weapon::Weapon(std::string type)
 
 Weapon::~Weapon(void){}
 
-Weapon::getType(void)
+const std::string &Weapon::getType(void)
 {
 	return(this->_type);
 }
 
-Weapon::setType(std::string newType)
+void Weapon::setType(std::string newType)
 {
 	this->_type = newType;
 }
