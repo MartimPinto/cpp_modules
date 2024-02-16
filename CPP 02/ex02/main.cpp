@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 15:16:06 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/02/15 12:23:44 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/16 12:19:52 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/16 15:21:55 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define	CONTACT_HPP
+#include "Fixed.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-
-class Contact
+int main(void) 
 {
-	private:
-		std::string firstname;
-		std::string	lastname;
-		std::string	nickname;
-		std::string	phonenumber;
-		std::string	darkest_secret;
-	
-	public:
-		Contact();
-		~Contact();
-};
+	Fixed a;
+	Fixed const b(Fixed(5.05f) * Fixed(2));
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << Fixed::max(a, b) << std::endl;
+	return 0;
+}
 
-
-#endif

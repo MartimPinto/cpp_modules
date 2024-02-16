@@ -1,35 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 15:16:06 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/02/15 12:23:44 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/15 12:21:32 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/15 12:22:29 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define	CONTACT_HPP
+#include "Contact.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <string>
+Contact::Contact(){}
 
-class Contact
-{
-	private:
-		std::string firstname;
-		std::string	lastname;
-		std::string	nickname;
-		std::string	phonenumber;
-		std::string	darkest_secret;
-	
-	public:
-		Contact();
-		~Contact();
-};
-
-
-#endif
+Contact::~Contact(){}

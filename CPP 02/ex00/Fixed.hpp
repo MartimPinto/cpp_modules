@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 15:16:06 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/02/15 12:23:44 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/16 12:14:20 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/16 14:11:41 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define	CONTACT_HPP
+#ifndef FIXEDPOINT_HPP
+#define FIXEDPOINT_HPP
 
 #include <iostream>
-#include <iomanip>
 #include <string>
 
-class Contact
+class Fixed
 {
 	private:
-		std::string firstname;
-		std::string	lastname;
-		std::string	nickname;
-		std::string	phonenumber;
-		std::string	darkest_secret;
-	
+			int _value;
+			static const int _numberFractional = 8;
 	public:
-		Contact();
-		~Contact();
+			Fixed();
+			Fixed(const Fixed &value);
+			Fixed& operator = (const Fixed &value);
+			~Fixed();
+	
+	int getRawBits(void) const;
+	void setRawBits(int const raw);
 };
-
 
 #endif

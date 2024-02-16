@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 14:41:18 by mcarneir          #+#    #+#             */
-/*   Updated: 2023/11/15 15:25:20 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/02/15 12:40:19 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,20 @@
 
 #include <iostream>
 #include <iomanip>
+#include <string>
+#include "Contact.hpp"
 
-class PhoneBook {
-	
+class PhoneBook 
+{
 	private:
-		static constant int max_contacts = 8;
+			Contact contact[8];
 		
 
 	public:
-		
 		PhoneBook();
 		~PhoneBook();
+		void add(void);
+		void search(void);
 
 	
 };
