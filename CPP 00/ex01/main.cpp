@@ -5,20 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 12:19:52 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/21 12:38:19 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/21 14:54:36 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/26 13:08:02 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
+#include "PhoneBook.hpp"
+#include "Contact.hpp"
 
-int main(void) 
+void usage()
 {
- ScavTrap c;
-
-  // Destructors are called automatically when objects go out of scope
-
-  return 0;
+	std::cout << RED << "Please use ADD, SEARCH OR EXIT" << RESET << std::endl;
 }
 
+int main (void)
+{
+	std::string cmd;
+	PhoneBook phone;
+
+	while (1)
+	{
+		std::cout << GREEN << "Type a command: " << RESET;
+		std::getline(std::cin, cmd);
+		if (cmd == "ADD")
+			phone.add();
+		else if (cmd == "EXIT")
+			break;
+		else if (cmd == "SEARCH")
+			phone.search(phone);
+		else if (cmd != "SEARCH" && cmd != "EXIT" && cmd != "ADD")
+			usage();
+    }
+	return (0);
+}

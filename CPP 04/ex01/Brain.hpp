@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 12:19:52 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/21 12:38:19 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/29 13:46:04 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/29 13:47:58 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
-int main(void) 
+#include <iostream>
+#include <string>
+
+class Brain
 {
- ScavTrap c;
+	private:
+			std::string _ideas[100];	
+	public:
+			Brain();
+			Brain(const Brain &src);
+			Brain& operator=(const Brain &copy);
+			virtual ~Brain();
+	
+};
 
-  // Destructors are called automatically when objects go out of scope
-
-  return 0;
-}
-
+#endif

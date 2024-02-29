@@ -6,19 +6,22 @@
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 12:19:52 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/21 12:38:19 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/02/21 13:19:13 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
-int main(void) 
+int main( void )
 {
- ScavTrap c;
+    FragTrap ash("Ash");
+    FragTrap ash2(ash);
 
-  // Destructors are called automatically when objects go out of scope
+    ash.attack("the air");
+    ash.takeDamage(50);
+    ash.beRepaired(10);
+    ash.highFiveGuys();
 
-  return 0;
+    return 0;
 }
 

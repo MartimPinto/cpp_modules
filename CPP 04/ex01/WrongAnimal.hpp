@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 12:19:52 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/21 12:38:19 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/16 12:14:20 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/29 13:06:31 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
-int main(void) 
+#include <iostream>
+#include <string>
+
+class WrongAnimal
 {
- ScavTrap c;
+	protected:
+			std::string type;	
+	public:
+			WrongAnimal();
+			WrongAnimal(const WrongAnimal &src);
+			WrongAnimal& operator=(const WrongAnimal &copy);
+			~WrongAnimal();
+	
+	void makeSound() const;
+	std::string getType() const;
+};
 
-  // Destructors are called automatically when objects go out of scope
-
-  return 0;
-}
-
+#endif

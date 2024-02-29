@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 12:19:52 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/21 12:38:19 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/21 13:56:23 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/21 14:01:42 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
+
 #include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
-int main(void) 
+class DiamondTrap: public ScavTrap, public FragTrap
 {
- ScavTrap c;
+	private:
+			std::string	_name;
+	public:
+			DiamondTrap();
+			DiamondTrap(std::string name);
+			DiamondTrap(const DiamondTrap &src);
+			DiamondTrap& operator=(const DiamondTrap &copy);
+			~DiamondTrap();
+	
+	using ScavTrap::attack;
+	void whoAmI(void);
+	
+};
 
-  // Destructors are called automatically when objects go out of scope
-
-  return 0;
-}
-
+#endif

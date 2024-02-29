@@ -1,44 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 14:41:18 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/02/22 17:38:36 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/16 12:14:20 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/19 16:46:15 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <iostream>
-#include <iomanip>
 #include <string>
-#include "Contact.hpp"
 
-#define RESET	"\033[0m"
-#define RED		"\033[1m\033[31m"
-#define GREEN	"\033[1m\033[32m"
-#define YELLOW	"\033[1m\033[33m"
-#define BLUE	"\033[1m\033[34m"
-
-class PhoneBook 
+class ClapTrap
 {
-	private:
-			Contact contact[8];
-			int	_id;
-			int numContacts;
-		
+	protected:
+			std::string _name;
+			int	_health;
+			int	_energy;
+			int	_attackDamage;
+			
 	public:
-			PhoneBook();
-			~PhoneBook();
-		void add(void);
-		void print(int index);
-		void search(PhoneBook &phone);
-
-	
+			ClapTrap();
+			ClapTrap(std::string name);
+			ClapTrap(const ClapTrap &src);
+			ClapTrap& operator=(const ClapTrap &copy);
+			~ClapTrap();
+			
+	void attack(const std::string& target);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
 };
 
 #endif

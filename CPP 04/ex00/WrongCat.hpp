@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 12:19:52 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/21 12:38:19 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/29 13:12:44 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/29 13:13:14 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include "ClapTrap.hpp"
 
-int main(void) 
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
+
+#include "WrongAnimal.hpp"
+
+class WrongCat : public WrongAnimal
 {
- ScavTrap c;
+	public:
+			WrongCat();
+			WrongCat(const WrongCat &src);
+			WrongCat& operator=(const WrongCat &copy);
+			~WrongCat();
+	
+	void makeSound() const;
+};
 
-  // Destructors are called automatically when objects go out of scope
-
-  return 0;
-}
-
+#endif

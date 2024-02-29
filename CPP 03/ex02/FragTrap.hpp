@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 12:19:52 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/21 12:38:19 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/02/21 12:43:51 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/02/21 12:54:50 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
+
 #include "ClapTrap.hpp"
 
-int main(void) 
+class FragTrap : public ClapTrap 
 {
- ScavTrap c;
+	public:
+			FragTrap();
+			FragTrap(std::string name);
+			FragTrap(const FragTrap &src);
+			FragTrap& operator=(const FragTrap &copy);
+			~FragTrap();
+			
+	void highFiveGuys(void);
+};
 
-  // Destructors are called automatically when objects go out of scope
-
-  return 0;
-}
-
+#endif
