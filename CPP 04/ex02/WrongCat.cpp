@@ -1,50 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:00:53 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/03/05 14:42:15 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/02/29 13:14:16 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog(): Animal()
+WrongCat::WrongCat(): WrongAnimal()
 {
-	std::cout << "Dog default constructor called" << std::endl;
-	this->type = "Dog";
-	this->_brain = new Brain();
+	std::cout << "WrongCat default constructor called" << std::endl;
+	this->type = "WrongCat";
 
 }
 
-Dog::Dog(const Dog &src): Animal(src)
+WrongCat::WrongCat(const WrongCat &src): WrongAnimal(src)
 {
-	std::cout << "Copy Dog constructor called" << std::endl;
-	this->_brain = NULL;
+	std::cout << "Copy WrongCat constructor called" << std::endl;
 	*this = src;
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-	delete this->_brain;
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "WrongCat destructor called" << std::endl;
 }
 
-Dog& Dog::operator=(const Dog &copy)
+WrongCat& WrongCat::operator=(const WrongCat &copy)
 {
 	if (this == &copy)
 		return (*this);
 	this->type = copy.type;
-	delete this->_brain;
-	this->_brain = new Brain (*copy._brain);
 	return (*this);
 }
 
-void Dog::makeSound() const
+void WrongCat::makeSound() const
 {
-	std::cout << "Dog: Woof!" << std::endl; 
+	std::cout << "WrongCat: Meow!" << std::endl; 
 }
 

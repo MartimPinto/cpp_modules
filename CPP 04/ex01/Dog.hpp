@@ -6,7 +6,7 @@
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 16:41:14 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/29 12:48:36 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/03/05 14:35:09 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 #define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal
 {
+	private:
+			Brain* _brain;
 	public:
 			Dog();
 			Dog(const Dog &src);
