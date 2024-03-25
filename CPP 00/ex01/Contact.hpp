@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:16:06 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/02/22 15:31:49 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/03/25 17:38:39 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ class Contact
 	std::string getName();
 	std::string getLastName();
 	std::string getNickName();
-	std::string truncate(std::string str);
 	void printContact();
 };
 

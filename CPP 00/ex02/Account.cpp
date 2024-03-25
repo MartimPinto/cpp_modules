@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:43:33 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/27 12:55:28 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/03/25 17:33:42 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ void Account::_displayTimestamp()
 	std::time_t currentTime = std::time(0);
 	std::tm* timemark = std::localtime(&currentTime);
 	std::cout << "[" << timemark->tm_year + 1900;
-	std::cout << std::setfill('0') << std::setw(2) << timemark -> tm_mon;
+	std::cout << std::setfill('0') << std::setw(2) << timemark -> tm_mon + 1;
 	std::cout << std::setfill('0') << std::setw(2) << timemark -> tm_mday << "_";
 	std::cout << std::setfill('0') << std::setw(2) << timemark -> tm_hour;
 	std::cout << std::setfill('0') << std::setw(2) << timemark -> tm_min;

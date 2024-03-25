@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 14:41:18 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/02/22 17:38:36 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/03/25 17:37:35 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <limits>
 #include "Contact.hpp"
 
 #define RESET	"\033[0m"
@@ -35,7 +36,6 @@ class PhoneBook
 			PhoneBook();
 			~PhoneBook();
 		void add(void);
-		void print(int index);
 		void search(PhoneBook &phone);
 
 	

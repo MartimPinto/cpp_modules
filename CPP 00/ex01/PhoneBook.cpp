@@ -93,18 +93,14 @@ void PhoneBook::search(PhoneBook &phone)
 		std::cin >> index;
 		std::cin.ignore();
 		std::cout << std::endl;
-		phone.print(index);
+		if (std::cin.good() && index >= 0 && index < 8) 
+        	this->contact[index].printContact();
+		else 
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+        	std::cout << RED << "Invalid contact index." << RESET << std::endl;
+			std::cout << std::endl;
+		}
 	}
-}
-
-void PhoneBook::print(int index)
-{
-    if (index >= 0 && index < 8) 
-        this->contact[index].printContact();
-	else 
-	{
-        std::cout << RED << "Invalid contact index." << RESET << std::endl;
-		std::cout << std::endl;
-	}
-
 }

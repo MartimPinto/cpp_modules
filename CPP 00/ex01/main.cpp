@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 14:54:36 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/26 13:08:02 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/03/25 17:37:10 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,22 @@ int main (void)
 	std::string cmd;
 	PhoneBook phone;
 
-	while (1)
+	while (std::cin)
 	{
 		std::cout << GREEN << "Type a command: " << RESET;
-		std::getline(std::cin, cmd);
-		if (cmd == "ADD")
-			phone.add();
-		else if (cmd == "EXIT")
-			break;
-		else if (cmd == "SEARCH")
-			phone.search(phone);
-		else if (cmd != "SEARCH" && cmd != "EXIT" && cmd != "ADD")
-			usage();
+		if (std::getline(std::cin, cmd))
+		{
+			if (cmd == "ADD")
+				phone.add();
+			else if (cmd == "EXIT")
+				break;
+			else if (cmd == "SEARCH")
+				phone.search(phone);
+			else if (cmd != "SEARCH" && cmd != "EXIT" && cmd != "ADD")
+				usage();
+		}
+		else
+			break ;
     }
 	return (0);
 }
