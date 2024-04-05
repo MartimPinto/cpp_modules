@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+         #
+#    By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 17:52:09 by mcarneir          #+#    #+#              #
-#    Updated: 2024/02/05 16:30:03 by martimpinto      ###   ########.fr        #
+#    Updated: 2024/03/29 17:07:14 by mcarneir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = brain
 
-CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 RM = rm -rf
 
 SRC = main.cpp
@@ -22,7 +22,7 @@ OBJ = $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		@ $(CC) $(OBJ) $(CFLAGS) -o $(NAME)
+		@ $(CXX) $(OBJ) $(CXXFLAGS) -o $(NAME)
 
 clean:
 		@$(RM) $(OBJ)

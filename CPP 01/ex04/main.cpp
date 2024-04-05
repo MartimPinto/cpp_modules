@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 15:58:25 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/02/08 17:41:49 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/04/01 16:24:55 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <cstdlib>
 
 #define RESET	"\033[0m"
 #define RED		"\033[1m\033[31m"
@@ -26,13 +27,13 @@ void	checkParam(int argc, char **argv)
 	if (argc != 4)
 	{
 		std::cout << BLUE << "USAGE: ./replace  filename  string1  string2  " << RESET << std::endl;
-		exit (1);
+		exit(1);
 	}
 	std::string find = argv[2];
 	if (find.empty())
 	{
 		std::cout << BLUE << "USAGE: string to find cannot be empty" << RESET << std::endl;
-		exit (1);
+		exit(1);
 	}
 }
 
@@ -53,13 +54,13 @@ std::string	replaceInLine(std::string toFind, std::string toReplace, std::string
 
 void	replacement(std::string filename, std::string s1, std::string s2)
 {
-	std::ifstream infile(filename);
+	std::ifstream infile(filename.c_str());
 	if(!infile.is_open())
 	{
 		std::cerr << RED << "Error: could not open file " << filename << RESET << std::endl;
 		return ;
 	}
-	std::ofstream outfile(filename + ".replace");
+	std::ofstream outfile((filename + ".replace").c_str());
 	if(!outfile.is_open())
 	{
 		std::cerr << RED << "Error: could not write file " << filename << ".replace" << RESET << std::endl;

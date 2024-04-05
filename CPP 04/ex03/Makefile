@@ -6,18 +6,17 @@
 #    By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 17:52:09 by mcarneir          #+#    #+#              #
-#    Updated: 2024/04/02 17:16:02 by mcarneir         ###   ########.fr        #
+#    Updated: 2024/04/05 14:52:17 by mcarneir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fixed
+NAME = materia
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 RM = rm -rf
 
-SRC = main.cpp Fixed.cpp
-OBJ = $(SRC:.cpp=.o)
+SRC = main.cpp AMateria.cpp
 
 all: $(NAME)
 

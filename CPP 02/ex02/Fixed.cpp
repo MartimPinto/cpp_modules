@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 12:29:48 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/16 16:58:56 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/04/05 15:44:13 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,7 @@ bool Fixed::operator==(Fixed const &value) const
 
 bool Fixed::operator!=(Fixed const &value) const 
 {
-	return(this->getRawBits() == value.getRawBits());
+	return(this->getRawBits() != value.getRawBits());
 }
 
 //----------------Min & Max--------------

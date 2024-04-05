@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 15:58:25 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/02/05 17:05:44 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/03/29 17:03:47 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main (int argc, char **argv)
 	if (argc != 3)
 	{
 		std::cout << BLUE << "USAGE: ./horde   size_of_horde   name_of_horde" << RESET << std::endl;
-		exit (1);
+		exit(1);
 	}
 	size = atoi(argv[1]);
 	horde = zombieHorde(size, argv[2]);

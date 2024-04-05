@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 12:14:20 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/04/05 15:43:49 by mcarneir         ###   ########.fr       */
+/*   Created: 2024/04/05 15:06:02 by mcarneir          #+#    #+#             */
+/*   Updated: 2024/04/05 15:07:22 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXEDPOINT_HPP
-#define FIXEDPOINT_HPP
+#include "AMateria.hpp"
 
-#include <iostream>
-#include <string>
-
-class Fixed
+AMateria::AMateria()
 {
-	private:
-			int _value;
-			static const int _numberFractional = 8;
-	public:
-			Fixed();
-			Fixed(const Fixed &value);
-			Fixed& operator=(const Fixed &value);
-			~Fixed();
-	
-	int getRawBits(void) const;
-	void setRawBits(int const raw);
-};
-
-#endif
+	std::cout << "AMateria Default constructor called" << std::endl;
+	this->_type = "default";
+}

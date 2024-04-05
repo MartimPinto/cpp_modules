@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 15:58:25 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/02/12 17:03:29 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/04/01 16:57:08 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int main(int argc, char **argv)
 	for (int i = 0; i < 4; i++)
 		if (levels[i] == argv[1])
 			index = i;
+	std::cout << std::endl;
 	switch (index)
 	{
 	
