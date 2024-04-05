@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 14:52:31 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/04/05 15:02:31 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/04/05 16:09:30 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class AMateria
 			~AMateria();
 
 			std::string const &getType() const;
+			void setType(std::string const &type);
 			virtual AMateria* clone() const = 0;
 			virtual void use(ICharacter& target);
 					
