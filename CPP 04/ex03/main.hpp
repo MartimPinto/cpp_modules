@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
+/*   main.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 16:57:18 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/04/08 19:10:09 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/04/08 19:18:26 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/04/08 19:20:11 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATERIASOURCE_HPP
-#define MATERIASOURCE_HPP
+#ifndef MAIN_HPP
+#define MAIN_HPP
 
+#include "AMateria.hpp"
+#include "Character.hpp"
+#include "Cure.hpp"
+#include "Ice.hpp"
+#include "ICharacter.hpp"
 #include "IMateriaSource.hpp"
-
-class MateriaSource: public IMateriaSource
-{
-	private:
-			AMateria *storage[4];
-			int	stored;
-	public:
-			MateriaSource();
-			MateriaSource(const MateriaSource &src);
-			MateriaSource& operator=(const MateriaSource &copy);
-			~MateriaSource();
-
-			void learnMateria(AMateria *m);
-			AMateria* createMateria(std::string const & type);
-			
-};
+#include "MateriaSource.hpp"
 
 #endif
