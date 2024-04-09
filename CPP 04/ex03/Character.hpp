@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:41:25 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/04/08 16:21:37 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/04/09 14:44:21 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Character: public ICharacter
 			std::string _name;
 			int	equip_count;
 			AMateria *inventory[4];
-			AMateria *unequiped[4];
+			AMateria *unequiped[999];
 	public:
 			Character();
 			Character(std::string const &name);

@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:56:13 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/04/08 16:52:24 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/04/09 14:46:14 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,24 @@
 Character::Character()
 {
 	std::cout << "Character default constructor called" << std::endl;
-	this->_name = "none";
+	this->_name = "default";
 	this->equip_count = 0;
 	for (int i = 0; i < 4; i++)
-	{
 		this->inventory[i] = NULL;
+	for (int i = 0; i < 999; i++)
 		this->unequiped[i] = NULL;
-	}
 }
 
 Character::Character(std::string const &name)
 {
-	std::cout << "Character " << this->_name << " constructor called" << std::endl;
 	this->_name = name;
 	this->equip_count = 0;
 	for (int i = 0; i < 4; i++)
-	{
 		this->inventory[i] = NULL;
+	for (int i = 0; i < 999; i++)
 		this->unequiped[i] = NULL;
-	}
+	std::cout << "Character " << this->_name << " constructor called" << std::endl;
+
 }
 
 Character::Character(const Character &src)
@@ -51,11 +50,14 @@ Character &Character::operator=(const Character &copy)
 	this->equip_count = copy.equip_count;
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->inventory[i])
-			delete this->inventory[i];
-		if (this->unequiped[i])
+		if (this->inventory[i] != NULL)
 			delete this->inventory[i];
 		this->inventory[i] = copy.inventory[i];
+	}
+	for (int i = 0; i < 999; i++)
+	{
+		if (this->unequiped[i] != NULL)
+			delete this->unequiped[i];
 		this->unequiped[i] = copy.unequiped[i];
 	}
 	return (*this);
@@ -66,10 +68,13 @@ Character::~Character()
 	std::cout << "Character destructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->inventory[i])
+		if (this->inventory[i] != NULL)
 			delete this->inventory[i];
-		if (this->unequiped[i])
-			delete this->inventory[i];
+	}
+	for (int i = 0; i < 999; i++)
+	{
+		if (this->unequiped[i] != NULL)
+			delete this->unequiped[i];
 	}
 }
 
@@ -91,9 +96,12 @@ void Character::equip(AMateria *m)
 	for (int i = 0; i < 4; i++)
 	{
 		if (this->inventory[i] == NULL)
+		{
 			this->inventory[i] = m;
+			this->equip_count++;
+			return ;
+		}
 	}
-	this->equip_count++;
 }
 
 void Character::unequip(int idx)
@@ -102,6 +110,7 @@ void Character::unequip(int idx)
 	if (idx < 0 || idx > 3)
 	{
 		std::cout << "Index out of range" << std::endl;
+		return ;
 	}
 	if (this->inventory[idx] == NULL)
 	{
@@ -109,10 +118,13 @@ void Character::unequip(int idx)
 		return ;
 	}
 	std::cout << this->_name << " unequips " << this->inventory[idx]->getType() << std::endl;
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 999; i++)
 	{
 		if (this->unequiped[i] == NULL)
+		{
 			this->unequiped[i] = this->inventory[idx];
+			break;
+		}
 	}
 	this->inventory[idx] = NULL;
 	this->equip_count--;

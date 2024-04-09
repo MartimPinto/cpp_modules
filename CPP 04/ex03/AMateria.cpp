@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 15:06:02 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/04/08 14:17:49 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/04/09 12:00:05 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ AMateria::AMateria()
 
 AMateria::AMateria(std::string const &type)
 {
-	std::cout << "AMateria constructor with type called" << std::endl;
 	setType(type);
+	std::cout << "AMateria constructor with type " << this->_type << " called" << std::endl;
 	
 }
 
