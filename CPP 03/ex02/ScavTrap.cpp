@@ -6,7 +6,7 @@
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:00:53 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/20 13:39:36 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/04/16 15:29:55 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &copy)
 {
 	if (this == &copy)
 		return (*this);
-	ClapTrap::operator=(copy);
+	this->_name = copy._name;
 	this->_health = copy._health;
     this->_energy = copy._energy;
     this->_attackDamage = copy._attackDamage;

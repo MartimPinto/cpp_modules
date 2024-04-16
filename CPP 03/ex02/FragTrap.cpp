@@ -6,7 +6,7 @@
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 12:49:57 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/21 12:56:50 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/04/16 15:29:43 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ FragTrap& FragTrap::operator=(const FragTrap &copy)
 {
 	if (this == &copy)
 		return (*this);
-	ClapTrap::operator=(copy);
+	this->_name = copy._name;
 	this->_health = copy._health;
     this->_energy = copy._energy;
     this->_attackDamage = copy._attackDamage;
