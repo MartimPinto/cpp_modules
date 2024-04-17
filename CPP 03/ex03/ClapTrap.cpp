@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 12:29:48 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/21 12:39:40 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/04/17 17:54:33 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,24 @@ void ClapTrap::beRepaired(unsigned int amount)
 	std::cout << "ClapTrap " << _name << " repairs and recovers " << amount << " hit points!" << std::endl;
 	_energy *= -1;
 	_health += amount;
+}
+
+std::string ClapTrap::getName() const
+{
+	return(this->_name);
+}
+
+int ClapTrap::getHealth() const
+{
+	return(this->_health);
+}
+
+int ClapTrap::getEnergy() const
+{
+	return(this->_energy);
+}
+
+int ClapTrap::getAttack() const
+{
+	return(this->_attackDamage);
 }

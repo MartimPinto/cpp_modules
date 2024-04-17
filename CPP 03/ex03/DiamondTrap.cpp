@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 14:07:59 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/21 14:47:04 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/04/17 18:17:55 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 DiamondTrap::DiamondTrap(): ClapTrap(), ScavTrap(), FragTrap()
 {
 	this->_name = "Default";
-	this->_health = FragTrap::_health;
-	this->_energy = ScavTrap::_energy;
-	this->_attackDamage = FragTrap::_attackDamage;
+	this->_health = 100;
+	this->_energy = 50;
+	this->_attackDamage = 30;
 	this->ClapTrap::_name = _name + "_clap_name";
 	std::cout << "DiamondTrap default constructor called" << std::endl;
 }
@@ -25,9 +25,9 @@ DiamondTrap::DiamondTrap(): ClapTrap(), ScavTrap(), FragTrap()
 DiamondTrap::DiamondTrap(std::string name): ClapTrap(name), ScavTrap(name), FragTrap(name)
 {
 	this->_name = name;
-	this->_health = FragTrap::_health;
-	this->_energy = ScavTrap::_energy;
-	this->_attackDamage = FragTrap::_attackDamage;
+	this->_health = 100;
+	this->_energy = 50;
+	this->_attackDamage = 30;
 	this->ClapTrap::_name = name + "_clap_name";
 	std::cout << "DiamondTrap " << this->_name << " has been built!" << std::endl;
 }
