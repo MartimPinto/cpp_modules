@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:00:53 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/04/16 15:28:17 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/04/18 11:50:23 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void ScavTrap::attack(const std::string& target)
 {
 	if (_energy <= 0 || _health <= 0) 
 	{
-		std::cout << "ScavTrap" << _name << " can't attack" << std::endl;
+		std::cout << "ScavTrap" << _name << " can't attack right now!" << std::endl;
 		return ;
 	}
 	std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;

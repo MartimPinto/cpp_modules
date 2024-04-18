@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 12:19:52 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/21 13:19:13 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/04/18 11:59:39 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 int main( void )
 {
-    FragTrap ash("Ash");
-    FragTrap ash2(ash);
+    FragTrap a("Pat");
+    FragTrap b(a);
 
-    ash.attack("the air");
-    ash.takeDamage(50);
-    ash.beRepaired(10);
-    ash.highFiveGuys();
+    a.attack("the air");
+    a.takeDamage(50);
+    a.beRepaired(10);
+    a.highFiveGuys();
+    b.attack("the ground");
+    b.highFiveGuys();
 
     return 0;
 }

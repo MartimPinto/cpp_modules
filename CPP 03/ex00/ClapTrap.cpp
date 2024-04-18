@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 12:29:48 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/04/17 17:35:20 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/04/18 11:55:23 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap()
 {
-	std::cout << "ClapTrap Default constructor called" << std::endl;
+	std::cout << "ClapTrap default constructor called" << std::endl;
 	this->_name = "Default";
 	this->_health = 10;
 	this->_energy = 10;
@@ -56,9 +56,9 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(const std::string &target)
 {
-	if (_energy <= 0)
+	if (_energy <= 0 || _health <= 0)
 	{
-		std::cout << "ClapTrap " << _name << " is out of energy!" << std::endl;
+		std::cout << "ClapTrap " << _name << " can't attack!" << std::endl;
 		return ;
 	}
 	std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
@@ -71,16 +71,16 @@ void ClapTrap::takeDamage(unsigned int amount)
 	_health -= amount;
 	if (_health <= 0)
 	{
-		std::cout << "ClapTrap " << _name << " is dead!" << std::endl;
+		std::cout << "ClapTrap " << _name << " is at 0 health!" << std::endl;
 		return ;
 	}
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (_energy <= 0)
+	if (_energy <= 0 || _health <= 0)
 	{
-		std::cout << "ClapTrap " << _name << " is out of energy!" << std::endl;
+		std::cout << "ClapTrap " << _name << " can't repair itself!" << std::endl;
 		return ;
 	}
 	std::cout << "ClapTrap " << _name << " repairs and recovers " << amount << " hit points!" << std::endl;

@@ -6,30 +6,12 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 12:19:52 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/04/17 18:26:24 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/04/18 11:53:07 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-/*int main( void )
-{
-    DiamondTrap ash( "Ash" );
-    DiamondTrap ash2( ash );
-    DiamondTrap ash3(".");
-
-    ash.whoAmI();
-    ash2.whoAmI();
-    ash3 = ash;
-    ash3.whoAmI();
-
-    ash.attack( "the air" );
-    ash.takeDamage( 10 );
-    ash.beRepaired( 10 );
-
-    return 0;
-    
-}*/
 
 int main(void)
 {
