@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 12:29:48 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/04/18 12:04:43 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/04/18 15:32:24 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,6 @@ void ClapTrap::beRepaired(unsigned int amount)
 		return ;
 	}
 	std::cout << "ClapTrap " << _name << " repairs and recovers " << amount << " hit points!" << std::endl;
-	_energy *= -1;
+	_energy -= 1;
 	_health += amount;
 }
