@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:56:13 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/04/09 14:46:14 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:45:11 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,12 @@ std::string const &Character::getName() const
 
 void Character::equip(AMateria *m)
 {
+	if (m == NULL)
+	{
+		std::cout << this->_name << "can't equip " << std::endl;
+		delete m;
+		return ;
+	}
 	if (this->equip_count > 3)
 	{
 		std::cout << this->_name << "'s inventory is full and can't equip " << m->getType() << std::endl;
