@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 16:41:14 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/03/05 14:44:09 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/04/23 12:15:09 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Cat : public Animal
 {
 	private:
-			Brain* _brain;
+			Brain *_brain;
 	public:
 			Cat();
 			Cat(const Cat &src);
@@ -27,6 +27,7 @@ class Cat : public Animal
 			~Cat();
 	
 	void makeSound() const;
+	Brain *getBrain() const;
 };
 
 #endif

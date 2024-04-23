@@ -6,14 +6,14 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 19:20:22 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/04/09 14:47:08 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/04/23 13:00:41 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
 
-/*Main given by the subject*/
+//Main given by the subject
 int main()
 {
     IMateriaSource* src = new MateriaSource();
@@ -35,9 +35,11 @@ int main()
 }
 
 
+/*
 //My own tests
-/*int main()
+int main()
 {
+  std::cout << "======LEARN, CREATE, EQUIP, UNEQUIP====" << std::endl;
   IMateriaSource	*newSrc = new MateriaSource();
   newSrc->learnMateria(new Ice());
   newSrc->learnMateria(new Cure());
@@ -68,7 +70,23 @@ int main()
   delete mark;
   delete sophie;
   delete newSrc; 
-}*/
+
+
+  std::cout << std::endl;
+  std::cout << "======DEEP COPY TEST====" << std::endl;
+
+	Ice	*basic = new Ice();
+	Ice *temp = new Ice(*basic);
+	
+	std::cout << std::endl << "temp : " << temp << " | type: " << temp->getType() << std::endl;
+	delete	temp;
+	
+	std::cout << std::endl << "basic: " << basic << " | type: " << basic->getType() << std::endl;
+	delete	basic;
+	
+	std::cout << std::endl;
+}
+*/
 
 
 

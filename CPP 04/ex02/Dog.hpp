@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 16:41:14 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/03/05 15:31:49 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/04/23 12:33:31 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Dog : public AAnimal
 			~Dog();
 	
 	void makeSound() const;
+	Brain *getBrain() const;
 };
 
 #endif

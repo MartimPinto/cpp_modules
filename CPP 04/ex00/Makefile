@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+         #
+#    By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 17:52:09 by mcarneir          #+#    #+#              #
-#    Updated: 2024/02/29 13:15:10 by martimpinto      ###   ########.fr        #
+#    Updated: 2024/04/23 12:03:41 by mcarneir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = animal
 
-CC = c++
+CXX = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 RM = rm -rf
 
@@ -22,7 +22,7 @@ OBJ = $(SRC:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		@ $(CC) $(OBJ) $(CFLAGS) -o $(NAME)
+		@ $(CXX) $(OBJ) $(CXXFLAGS) -o $(NAME)
 
 clean:
 		@$(RM) $(OBJ)
