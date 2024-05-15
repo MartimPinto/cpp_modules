@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 16:10:33 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/05/07 16:50:49 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/05/15 15:04:58 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ class Bureaucrat
 {
 	private:
 			const std::string	_name;
-			size_t	_grade;
+			long	_grade;
 	public:
 			Bureaucrat(const std::string name);
-			Bureaucrat(const std::string name, size_t grade);
+			Bureaucrat(const std::string name, long grade);
 			Bureaucrat(const Bureaucrat &src);
 			Bureaucrat &operator=(const Bureaucrat &copy);
 			~Bureaucrat();
@@ -45,5 +45,7 @@ class Bureaucrat
 			};
 			
 };
+
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);
 
 #endif
