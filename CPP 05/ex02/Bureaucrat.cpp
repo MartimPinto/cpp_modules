@@ -6,11 +6,17 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 16:30:05 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/05/15 16:31:33 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:19:37 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+Bureaucrat::Bureaucrat(): _name("default")
+{
+	this->_grade = 150;
+	std::cout << "Bureaucrat " << this->_name << " constructor called!" << std::endl;
+}
 
 Bureaucrat::Bureaucrat(const std::string name): _name(name)
 {
@@ -71,6 +77,21 @@ void Bureaucrat::decreaseGrade()
 	if (this->getGrade() == 150)
 		throw GradeTooLowException();
 	this->_grade += 1;
+	std::cout << this->getName() << " Grade Decreased to " << this->getGrade() << std::endl;
+}
+
+void Bureaucrat::signForm(AForm& form) const
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << getName() << " signed " << form.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << getName() << " couldn't sign " << form.getName() << " because " << e.what() << '\n';
+	}
+		
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
