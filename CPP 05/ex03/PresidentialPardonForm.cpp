@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/17 11:00:26 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/06/18 12:05:33 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/06/17 11:59:47 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/06/17 12:38:10 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ShrubberyCreationForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target):AForm("ShrubberyCreationForm", 145, 137), _target(target)
+PresidentialPardonForm::PresidentialPardonForm(const std::string &target):AForm("PresidentialPardonForm", 25, 5), _target(target) 
 {
-	std::cout << "ShrubberyCreationForm created!" << std::endl;
+	std::cout << "PresidentialPardonForm created!" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &src):AForm(src), _target(src._target)
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &src):AForm(src), _target(src._target)
 {
-	std::cout << "ShruberryCreationForm copy constructor called!" << std::endl;
+	std::cout << "Presidential copy constructor" << std::endl; 
 }
+
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-ShrubberyCreationForm::~ShrubberyCreationForm()
+PresidentialPardonForm::~PresidentialPardonForm()
 {
 }
 
@@ -39,7 +40,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs)
+PresidentialPardonForm& PresidentialPardonForm::operator=(PresidentialPardonForm const &rhs)
 {
 	if ( this != &rhs )
 	{
@@ -53,17 +54,10 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 ** --------------------------------- METHODS ----------------------------------
 */
 
-void ShrubberyCreationForm::execute(void) const
-{
-	std::ofstream output((this->_target + "_shrubbery").c_str());
-	output << "   *\n";
-  	output << "  /|\\\n";
-  	output << " / | \\\n";
-  	output << "/__|__\\\n";
-  	output << "   |\n";
-  	output.close();
-}
-
+	void	PresidentialPardonForm::execute(void) const
+	{		
+		std::cout << this->_target << " has been pardoned by President Zaphod Beeblebrox" << std::endl;	
+	}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

@@ -6,7 +6,7 @@
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 17:27:47 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/02/12 16:55:47 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/06/18 12:48:07 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void Harl::warning(void)
 	std::cout << "working here since last month." << std::endl;
 }
 
-void::Harl::error(void)
+void Harl::error(void)
 {
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }

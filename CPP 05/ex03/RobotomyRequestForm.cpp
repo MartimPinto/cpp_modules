@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/17 11:00:26 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/06/18 12:05:33 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/06/17 11:59:47 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/06/17 12:38:10 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target):AForm("ShrubberyCreationForm", 145, 137), _target(target)
+RobotomyRequestForm::RobotomyRequestForm(const std::string &target):AForm("RobotomyRequestForm", 72, 45), _target(target) 
 {
-	std::cout << "ShrubberyCreationForm created!" << std::endl;
+	std::cout << "RobotomyRequestForm created!" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &src):AForm(src), _target(src._target)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src):AForm(src), _target(src._target)
 {
-	std::cout << "ShruberryCreationForm copy constructor called!" << std::endl;
+	std::cout << "Robotomy copy constructor" << std::endl; 
 }
+
 
 /*
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-ShrubberyCreationForm::~ShrubberyCreationForm()
+RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
 
@@ -39,7 +40,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm const &rhs)
+RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const &rhs)
 {
 	if ( this != &rhs )
 	{
@@ -53,17 +54,16 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 ** --------------------------------- METHODS ----------------------------------
 */
 
-void ShrubberyCreationForm::execute(void) const
-{
-	std::ofstream output((this->_target + "_shrubbery").c_str());
-	output << "   *\n";
-  	output << "  /|\\\n";
-  	output << " / | \\\n";
-  	output << "/__|__\\\n";
-  	output << "   |\n";
-  	output.close();
-}
-
+	void	RobotomyRequestForm::execute(void) const
+	{
+		static int	i;
+		std::cout << "* BZZZZZ DREEEEEE *" << std::endl;
+		if (i % 2 == 0)
+			std::cout << this->_target << " has been successfully robotomized" << std::endl;
+		else
+			std::cout << this->_target << " robotomization failed" << std::endl;
+		i++;
+	}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
