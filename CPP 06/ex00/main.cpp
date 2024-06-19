@@ -5,33 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 14:27:42 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/06/19 12:55:07 by martimpinto      ###   ########.fr       */
+/*   Created: 2024/06/18 16:39:44 by martimpinto       #+#    #+#             */
+/*   Updated: 2024/06/18 16:41:50 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "AForm.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "Intern.hpp"
+#include "ScalarConverter.hpp"
 
-
-int main()
+int main(int argc, char **argv)
 {
-	try
+	if (argc != 2)
 	{
-		Intern rando;
-		AForm *rff;
-
-		rff = rando.makeForm("Quizz", "Bender");
-		std::cout << rff->getName() << std::endl;
-		rff->execute();
-		delete rff; 
+		return(std::cout << "Only 1 argument is allowed" << std::endl, 1);
 	}
-	catch(const std::exception &e)
-	{
-		std::cerr << e.what();
-	}
+	ScalarConverter::convert(argv[1]);
+	return 0;
 }

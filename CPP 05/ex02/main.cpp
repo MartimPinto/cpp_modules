@@ -6,7 +6,7 @@
 /*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 14:27:42 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/06/18 16:04:16 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/06/19 12:54:56 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int main()
 		a.executeForm(form3);
 		
 	}
-	catch(std::exception &e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what();
 	}	

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 14:27:42 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/05/15 15:36:09 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/06/19 12:46:02 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,11 @@ int main()
 		std::cout << a;
 		a.increaseGrade();
 	}
-	catch(const Bureaucrat::GradeTooHighException& e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what();
 		std::cout << std::endl;
 	}
-	catch(const Bureaucrat::GradeTooLowException& e)
-	{
-		std::cerr << e.what();
-		std::cout << std::endl;
-	}
-
 	try
 	{
 		std::cout << RED << "#----- DECREASE TEST -----#" << RESET << std::endl;
@@ -51,17 +45,11 @@ int main()
 		std::cout << b;
 		b.decreaseGrade();
 	}
-	catch(const Bureaucrat::GradeTooHighException& e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what();
 		std::cout << std::endl;
 	}
-	catch(const Bureaucrat::GradeTooLowException& e)
-	{
-		std::cerr << e.what();
-		std::cout << std::endl;
-	}
-
 	try
 	{
 		std::cout << RED << "#----- CREATION TEST -----#" << RESET << std::endl;
@@ -70,12 +58,7 @@ int main()
 		Bureaucrat c("Claire", 151);
 		//Bureaucrat d("Denise", 0);
 	}
-	catch(const Bureaucrat::GradeTooHighException& e)
-	{
-		std::cerr << e.what();
-		std::cout << std::endl;
-	}
-	catch(const Bureaucrat::GradeTooLowException& e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what();
 		std::cout << std::endl;
@@ -97,15 +80,9 @@ int main()
 		std::cout << e << f << g << h;
 		std::cout << std::endl;
 	}
-	catch(const Bureaucrat::GradeTooHighException& e)
+	catch(const std::exception &e)
 	{
 		std::cerr << e.what();
 		std::cout << std::endl;
 	}
-	catch(const Bureaucrat::GradeTooLowException& e)
-	{
-		std::cerr << e.what();
-		std::cout << std::endl;
-	}
-	
 }
