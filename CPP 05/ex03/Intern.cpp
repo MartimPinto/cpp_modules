@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 12:12:20 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/06/18 15:44:39 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/06/20 13:18:21 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

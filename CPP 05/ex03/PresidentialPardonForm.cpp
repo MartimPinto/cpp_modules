@@ -54,10 +54,10 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(PresidentialPardonForm
 ** --------------------------------- METHODS ----------------------------------
 */
 
-	void	PresidentialPardonForm::execute(void) const
-	{		
-		std::cout << this->_target << " has been pardoned by President Zaphod Beeblebrox" << std::endl;	
-	}
+void	PresidentialPardonForm::execute(void) const
+{
+	std::cout << this->_target << " has been pardoned by President Zaphod Beeblebrox" << std::endl;	
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------

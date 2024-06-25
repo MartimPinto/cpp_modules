@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 14:27:42 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/06/19 12:54:56 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/06/20 14:34:37 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,6 @@ int main()
 		std::cout << std::endl;
 
 		a.signForm(form2);
-		a.executeForm(form2);
-		a.executeForm(form2);
-		a.executeForm(form2);
 		a.executeForm(form2);
 
 		std::cout << std::endl;

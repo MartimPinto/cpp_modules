@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 16:12:39 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/06/18 16:39:13 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/06/25 18:26:39 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,19 @@
 
 # include <iostream>
 # include <string>
-# include <limits>
+# include <climits>
 # include <fstream>
+# include <sstream>
+# include <cmath>
+# include <iomanip>
+# include <cstdlib>
+
+#define CHAR	1;
+#define INT		2;
+#define DOUBLE	3;
+#define	FLOAT	4;
+#define	NAN_INF	5;
+#define	ERROR	6;
 
 class ScalarConverter
 {
@@ -24,16 +35,15 @@ class ScalarConverter
 	public:
 			static void convert(const std::string &str);
 
-
 	private:
 		ScalarConverter();
-		ScalarConverter( ScalarConverter const & src );
+		ScalarConverter(ScalarConverter const &src);
 		~ScalarConverter();
+		
+
 
 		ScalarConverter &operator=(ScalarConverter const &rhs);
 
 };
-
-std::ostream &			operator<<( std::ostream & o, ScalarConverter const & i );
 
 #endif /* ************************************************* SCALARCONVERTER_H */

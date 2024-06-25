@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 11:59:47 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/06/17 12:38:10 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/06/20 14:35:43 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,16 +54,17 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const &r
 ** --------------------------------- METHODS ----------------------------------
 */
 
-	void	RobotomyRequestForm::execute(void) const
-	{
-		static int	i;
-		std::cout << "* BZZZZZ DREEEEEE *" << std::endl;
-		if (i % 2 == 0)
-			std::cout << this->_target << " has been successfully robotomized" << std::endl;
-		else
-			std::cout << this->_target << " robotomization failed" << std::endl;
-		i++;
-	}
+void	RobotomyRequestForm::execute(void) const
+{
+
+	std::cout << "* BZZZZZ DREEEEEE *" << std::endl;
+
+	std::srand(std::time(0));
+	if (std::rand() % 2)
+		std::cout << GREEN << this->_target << " has been successfully robotomized\n" << RESET << std::endl;
+	else
+		std::cout << RED << this->_target << " robotomization failed\n" << RESET << std::endl;
+}
 
 /*
 ** --------------------------------- ACCESSOR ---------------------------------
