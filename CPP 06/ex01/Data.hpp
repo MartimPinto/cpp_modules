@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 16:39:44 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/06/26 14:22:24 by mcarneir         ###   ########.fr       */
+/*   Created: 2024/06/26 17:10:24 by mcarneir          #+#    #+#             */
+/*   Updated: 2024/06/26 17:30:13 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef DATA_HPP
+#define DATA_HPP
 
-int main(int argc, char **argv)
+#include <string>
+#include <iostream>
+
+typedef struct Data
 {
-	if (argc != 2)
-	{
-		return(std::cout << RED << "Only 1 argument is allowed" << RESET << std::endl, 1);
-	}
-	ScalarConverter::convert(argv[1]);
-	return 0;
-}
+	std::string	name;
+	int			age;
+};
+
+
+
+#endif
