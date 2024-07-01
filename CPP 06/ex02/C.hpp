@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   C.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/26 17:10:24 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/07/01 13:14:20 by mcarneir         ###   ########.fr       */
+/*   Created: 2024/07/01 13:30:24 by mcarneir          #+#    #+#             */
+/*   Updated: 2024/07/01 13:34:11 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA_HPP
-#define DATA_HPP
+#ifndef C_HPP
+#define C_HPP
 
-#include <string>
-#include <iostream>
+#include "Base.hpp"
 
-typedef struct sData
-{
-	std::string	name;
-	int			age;
-} Data;
-
-
+class C: public Base {};
 
 #endif

@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   B.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/26 18:08:59 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/06/26 18:10:47 by mcarneir         ###   ########.fr       */
+/*   Created: 2024/07/01 13:30:24 by mcarneir          #+#    #+#             */
+/*   Updated: 2024/07/01 13:33:48 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.hpp"
+#ifndef B_HPP
+#define B_HPP
 
-int main()
-{
-	Data *test = new Data
-	test->
-}
+#include "Base.hpp"
+
+class B: public Base {};
+
+#endif

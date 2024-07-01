@@ -6,17 +6,17 @@
 #    By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 17:52:09 by mcarneir          #+#    #+#              #
-#    Updated: 2024/07/01 13:15:59 by mcarneir         ###   ########.fr        #
+#    Updated: 2024/07/01 13:36:11 by mcarneir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = serialize
+NAME = base
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 RM = rm -rf
 
-SRC = main.cpp Serializer.cpp
+SRC = main.cpp Base.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
