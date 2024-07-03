@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 17:10:27 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/07/01 13:20:13 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:02:23 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Serializer::~Serializer()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-Serializer &				Serializer::operator=( Serializer const & rhs )
+Serializer &Serializer::operator=(Serializer const &rhs)
 {
 	if ( this == &rhs )
 		return *this;
