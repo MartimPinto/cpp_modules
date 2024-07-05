@@ -6,17 +6,17 @@
 #    By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 17:52:09 by mcarneir          #+#    #+#              #
-#    Updated: 2024/07/05 12:42:09 by mcarneir         ###   ########.fr        #
+#    Updated: 2024/07/05 15:28:19 by mcarneir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = iter
+NAME = array
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 RM = rm -rf
 
-SRC = main.cpp
+SRC = main.cpp 
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

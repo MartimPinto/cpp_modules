@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 16:12:39 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/07/05 13:07:26 by mcarneir         ###   ########.fr       */
+/*   Created: 2024/07/05 13:11:50 by mcarneir          #+#    #+#             */
+/*   Updated: 2024/07/05 16:40:35 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITER_HPP
-# define ITER_HPP
+#ifndef ARRAY_HPP
+# define ARRAY_HPP
 
 # include <iostream>
 # include <string>
@@ -20,19 +20,24 @@
 #define RED		"\033[1m\033[31m"
 #define GREEN	"\033[1m\033[32m"
 
-template <typename T> void printElement(T &element)
+template <typename T> class Array
 {
-	std::cout << element << std::endl;
-}
+	private:
+		T* _arr;
+		int _len;
+	public:
+		Array();
+		Array(unsigned int n);
+		Array(const Array<T> &src);
+		Array &operator=(const Array<T> &src);
+		~Array();
+		T& operator[](int index);
 
-template <typename T> void iter(T* arr, size_t n, void(*f)(T& arg))
-{
-	for (size_t i = 0; i < n; i++)
-		f(arr[i]);
-}
+		int size(void) const;
+
+	
+};
 
 
 
-
-
-#endif /* ************************************************* SCALARCONVERTER_H */
+# endif 
