@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 13:11:50 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/07/05 16:40:35 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/07/08 14:04:28 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ template <typename T> class Array
 		T& operator[](int index);
 
 		int size(void) const;
-
 	
 };
 
