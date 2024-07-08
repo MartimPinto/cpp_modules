@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 14:33:32 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/07/08 14:12:51 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/07/08 16:15:51 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,16 @@ template <typename T> Array<T>::~Array()
 	delete[] _arr;
 }
 
-template <typename T> Array<T>::Array(const Array<T> &src)
+template <typename T> Array<T>::Array(const Array<T> &src): _arr(NULL)
 {
-	*this = src;
+	this->_len = src.size();
+	this->_arr = new T[_len];
+	for (int i = 0; i < _len; i++)
+		this->_arr[i] = src._arr[i];
 }
 
 template <typename T>Array<T> &Array<T>::operator=(const Array<T> &src)
 {
-	if(this == src)
-		return (*this);
 	if (this->_arr)
 		delete[] _arr;
 	this->_len = src.size();

@@ -6,7 +6,7 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 16:12:39 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/07/05 13:07:26 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/07/08 16:53:02 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@
 #define RED		"\033[1m\033[31m"
 #define GREEN	"\033[1m\033[32m"
 
-template <typename T> void printElement(T &element)
+template <typename T> void printElement(T& element)
 {
 	std::cout << element << std::endl;
 }
 
-template <typename T> void iter(T* arr, size_t n, void(*f)(T& arg))
+template <typename T, typename U> void iter(T* arr, size_t n, void(*f)(U&))
 {
 	for (size_t i = 0; i < n; i++)
 		f(arr[i]);
