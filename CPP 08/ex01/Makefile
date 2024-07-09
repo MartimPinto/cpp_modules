@@ -6,17 +6,17 @@
 #    By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 17:52:09 by mcarneir          #+#    #+#              #
-#    Updated: 2024/07/09 11:45:27 by martimpinto      ###   ########.fr        #
+#    Updated: 2024/07/09 15:23:52 by martimpinto      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = array
+NAME = span
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 RM = rm -rf
 
-SRC = main.cpp 
+SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

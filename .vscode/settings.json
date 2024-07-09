@@ -1,5 +1,6 @@
 {
 	"files.associations": {
+		"*.tpp": "cpp",
 		"__bit_reference": "cpp",
 		"__config": "cpp",
 		"__debug": "cpp",
@@ -66,6 +67,7 @@
 		"concepts": "cpp",
 		"memory": "cpp",
 		"type_traits": "cpp",
-		"algorithm": "cpp"
+		"algorithm": "cpp",
+		"list": "cpp"
 	}
 }
