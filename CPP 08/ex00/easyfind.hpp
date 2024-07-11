@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 14:51:30 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/07/09 15:38:25 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/07/11 14:49:08 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ void printInt(int i);
 
 class NotFoundException: public std::exception
 {
-	 virtual const char *what() const throw();
+	public:
+			virtual const char *what() const throw();
 };
 
 
