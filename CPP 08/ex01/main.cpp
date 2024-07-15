@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 14:58:48 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/07/11 17:09:09 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/07/15 16:52:59 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,34 @@ int main()
 {
 	srand(time(0));
 	Span	a(3);
-	Span 	b(1000);
+	Span 	b(15000);
+	try
+	{
+		a.addNumber(1);
+		a.addNumber(5);
+		a.addNumber(42);
 
-	a.addNumber(7);
-	a.addNumber(24);
-	a.addNumber(42);
+		std::cout << GREEN << "Elements in container 'a' (limit 3): " << RESET << a << std::endl;
+		std::cout << GREEN << "Longest Span in 'a': " << RESET << a.longestSpan() << std::endl;
+		std::cout << GREEN << "Shortest Span in 'a': " << RESET << a.shortestSpan() << std::endl;
 
-	std::cout << a << std::endl;
+		a.addNumber(52);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << RED << e.what() << RESET <<'\n';
+	}
+	try
+	{
+		b.addRange();
+		std::cout << GREEN << "Elements in container 'b': " << RESET << b << std::endl;
+		std::cout << GREEN << "Longest Span in 'b': " << RESET << b.longestSpan() << std::endl;
+		std::cout << GREEN << "Shortest Span in 'b': " << RESET << b.shortestSpan() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	
 
-	/*std::vector<int>::const_iterator it = b.getVector()->begin();
-	std::vector<int>::const_iterator ite = b.getVector()->end();*/
-
-	std::vector<int> v(1000);
-	std::generate(v.begin(), v.end(), std::rand);
-
-	b.addNumbers(v.begin(), v.end());
-
-	std::cout << b << std::endl;
 }
