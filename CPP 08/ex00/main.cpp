@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 14:18:08 by martimpinto       #+#    #+#             */
-/*   Updated: 2024/07/09 15:43:24 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/07/17 15:14:56 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
 		toFind = rand() % 7;
 		std::cout << GREEN << "To Find: " << RESET << toFind << std::endl;
 		int index = easyfind(vct, toFind);
-		std::cout << GREEN << "Found " << toFind << " at index " << index << RESET << std::endl;
+		std::cout << GREEN << "Found " << toFind << " at index " << RESET << index << std::endl;
 	}
 	catch(const std::exception& e)
 	{
@@ -41,7 +41,7 @@ int main()
 		toFind = rand() % 7;
 		std::cout << GREEN << "To Find: " << RESET << toFind << std::endl;
 		int index = easyfind(lst, toFind);
-		std::cout << GREEN << "Found " << toFind << " at index " << index << RESET << std::endl;
+		std::cout << GREEN << "Found " << toFind << " at index " << RESET  << index << std::endl;
 	}
 	catch(const std::exception& e)
 	{

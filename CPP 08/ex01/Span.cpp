@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 13:32:58 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/07/15 16:53:21 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/07/17 15:33:19 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
+#include <limits>
+#include <algorithm>
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
@@ -102,8 +104,8 @@ int Span::shortestSpan()
 	std::vector<int>::iterator it = _cont.begin();
 	std::vector<int>::iterator ite = _cont.end();
 	std::sort(it, ite);
-	int span = abs(*it - *(it + 1));
-	while (it != ite)
+	int span = std::numeric_limits<int>::max();
+	while (it != ite - 1)
 	{
 		if(abs(*it - *(it + 1)) < span)
 			span = abs(*it - *(it + 1));

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 14:58:48 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/07/15 16:52:59 by martimpinto      ###   ########.fr       */
+/*   Updated: 2024/07/17 15:45:48 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ int main()
 {
 	srand(time(0));
 	Span	a(3);
-	Span 	b(15000);
+	Span 	b(10000);
+
 	try
 	{
 		a.addNumber(1);
@@ -44,6 +45,4 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
-	
-
 }
