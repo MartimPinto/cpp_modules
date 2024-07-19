@@ -26,11 +26,13 @@ class BitcoinExchange
 
 		BitcoinExchange &operator=( BitcoinExchange const & rhs );
 		void readCSV(const std::string& filename);
-		const std::map<std::string, double> *getMap(void) const;
+		void operation(const std::string& file);
+		void printInfo(std::string date, float value);
+		const std::map<std::string, float> *getMap(void) const;
 
 
 	private:
-			std::map<std::string,double> _prices;
+			std::map<std::string,float> _prices;
 			std::string _file;
 
 

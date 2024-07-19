@@ -6,27 +6,33 @@
 /*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 12:24:05 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/07/18 16:34:41 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/07/19 17:33:09 by mcarneir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.cpp"
 
-/*void checkParams(int argc, char **argv)
+void checkParams(int argc, char **argv)
 {
-	std::string arg = argv[1];
-	if (argc != 2 && arg.empty())
+	if (argc != 2)
 	{
 		std::cerr << "Error: could not open file" << std::endl;
 		exit(1);
 	}
+	std::string arg = argv[1];
+    if (arg.empty())
+    {
+        std::cerr << "Error: file empty" << std::endl;
+        exit(1);
+    }
 
 }
-*/
+
 
 int main(int argc, char **argv)
 {
-	/*checkParams(argc, argv);
+	BitcoinExchange btc;
+	checkParams(argc, argv);
 	std::ifstream file(argv[1]);
 	if (!file.is_open())
 	{
@@ -34,22 +40,7 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 	file.close();
-	*/
-
-	(void)argc;
-	(void)argv;
-
-	BitcoinExchange btc;
 	btc.readCSV("data.csv");
-	std::map<std::string, double>::const_iterator it = btc.getMap()->begin();
-	std::map<std::string, double>::const_iterator ite = btc.getMap()->end();
-	while (it != ite)
-	{
-		 std::cout << "Key: " << it->first
-             << ", Value: " << it->second << std::endl;
-        ++it;
-	}
-
-
-	
+	btc.operation(argv[1]);
+	return 0;
 }
