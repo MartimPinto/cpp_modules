@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PmergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 14:57:37 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/07/23 17:41:46 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/07/25 14:16:51 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <vector>
 # include <deque>
 # include <cstdlib>
+# include <ctime>
 
 class PmergeMe
 {
@@ -33,7 +34,12 @@ class PmergeMe
 
 		std::vector<int> *getVector(void);
 		std::deque<int> *getDeque(void);
-		std::vector<int> *sortVector(std::vector<int> &vec);
+		void sortVector(std::vector<int> &vec);
+        std::vector<int> insertVector(std::vector<int> &left, std::vector<int> &right, std::vector<int> &vec);
+        void sortDeque(std::deque<int> &deq);
+        std::deque<int> insertDeque(std::deque<int> &left, std::deque<int> &right, std::deque<int> &deq);
+        double calculateTime(clock_t start, clock_t end);
+        void operate();
 
 	private:
 			std::vector<int> _vec;

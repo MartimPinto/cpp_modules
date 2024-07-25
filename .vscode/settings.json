@@ -68,6 +68,7 @@
 		"memory": "cpp",
 		"type_traits": "cpp",
 		"algorithm": "cpp",
-		"list": "cpp"
+		"list": "cpp",
+		"execution": "cpp"
 	}
 }

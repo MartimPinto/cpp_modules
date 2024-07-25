@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcarneir <mcarneir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: martimpinto <martimpinto@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 15:44:32 by mcarneir          #+#    #+#             */
-/*   Updated: 2024/07/23 17:17:30 by mcarneir         ###   ########.fr       */
+/*   Updated: 2024/07/25 15:37:13 by martimpinto      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,32 @@ void CheckParams(int argc, char **argv)
 {
 	if (argc < 3)
 	{
-		std::cerr << "Error" << std::endl;
+		std::cerr << "Error: Invalid Number of Arguments" << std::endl;
 		exit(1);
 	}
 	for (int i = 1; argv[i]; ++i)
 	{
 		if(std::string(argv[i]).find_first_not_of("0123456789 ") != std::string::npos)
 		{
-			std::cerr << "Error" << std::endl;
+			std::cerr << "Error: Invalid Element" << std::endl;
 			exit(1);
+		}
+	}
+	for (int i = 1; argv[i + 1]; ++i) 
+	{
+		for (int j = i + 1; argv[j]; ++j) 
+		{
+			if (std::string(argv[i]) == std::string(argv[j])) 
+			{
+				std::cerr << "Error: Parameters cannot be the same" << std::endl;
+				exit(1);
+			}
 		}
 	}
 }
 
 int main(int argc, char **argv)
 {
-	
 	CheckParams(argc, argv);
 
 	PmergeMe a;
@@ -40,7 +50,5 @@ int main(int argc, char **argv)
 		a.getVector()->push_back(atoi(argv[i]));
 		a.getDeque()->push_back(atoi(argv[i]));
 	}
-	printElements(*a.getVector(), "Vector");
-	printElements(*a.getDeque(), "Deque");
-	
+	a.operate();
 }
