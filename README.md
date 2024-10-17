@@ -3,7 +3,7 @@
 
 </p>
 <p align="center">
-	<a href="#about">About</a> •
+	<a href="#about">About</a> 
 </p>
 
 ## About
